@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+    <defs>
+      <linearGradient id="spk" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f97316"/>
+        <stop offset="100%" stop-color="#db2777"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="400" rx="24" fill="#0f172a"/>
+    <!-- Speaker Body (Cylinder) -->
+    <rect x="135" y="110" width="130" height="180" rx="45" fill="#1e293b" stroke="url(#spk)" stroke-width="4"/>
+    <!-- Mesh pattern -->
+    <circle cx="200" cy="180" r="35" fill="none" stroke="#475569" stroke-width="3" stroke-dasharray="6 6"/>
+    <circle cx="200" cy="180" r="20" fill="#f97316" opacity="0.8"/>
+    <!-- Glowing LED Ring at Top -->
+    <ellipse cx="200" cy="125" rx="50" ry="12" fill="#090d16" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Sound Waves -->
+    <path d="M 95 160 Q 75 180 95 200" fill="none" stroke="#db2777" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 305 160 Q 325 180 305 200" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round"/>
+    <text x="200" y="350" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="600" font-size="14" letter-spacing="2">ECHOBEAM HI-FI 360°</text>
+  </svg>

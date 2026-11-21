@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+    <rect width="400" height="400" rx="24" fill="#0f172a"/>
+    <!-- Base Plate -->
+    <ellipse cx="200" cy="270" rx="130" ry="35" fill="#1e293b" stroke="#475569" stroke-width="3"/>
+    <!-- Upright stand -->
+    <path d="M 190 270 L 205 130" stroke="#64748b" stroke-width="12" stroke-linecap="round"/>
+    <!-- MagSafe Disk -->
+    <circle cx="205" cy="130" r="45" fill="#090d16" stroke="#38bdf8" stroke-width="4"/>
+    <circle cx="205" cy="130" r="30" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+    <polygon points="205,115 198,130 205,130 202,145 212,127 205,127" fill="#38bdf8"/>
+    <!-- Earbuds Charging Pad on Base -->
+    <ellipse cx="140" cy="270" rx="28" ry="12" fill="#090d16" stroke="#10b981" stroke-width="2"/>
+    <text x="200" y="350" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="600" font-size="14" letter-spacing="2">ZENPOD 3-IN-1 WIRELESS</text>
+  </svg>

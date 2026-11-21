@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaMart | Next-Gen E-Commerce Store</title>
+  <meta name="description" content="Discover premium electronics, audio gear, and lifestyle tech with fast shipping and instant order tracking.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z'/></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Special Offers">
+    <span>✨ SPECIAL LAUNCH OFFER: Use promo code <strong>SAVE20</strong> for 20% off orders over $100</span>
+    <span>•</span>
+    <span>🚀 Free Express Delivery on orders over $100</span>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <span>NovaMart<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" class="search-input" placeholder="Search premium tech, audio, accessories..." autocomplete="off">
+        <button id="clear-search" class="clear-search-btn" title="Clear search">✕</button>
+      </div>
+
+      <!-- Nav Action Buttons -->
+      <div class="nav-actions">
+        <button id="btn-track-nav" class="nav-btn" title="Track an order">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+          <span>Track Order</span>
+        </button>
+
+        <button id="btn-wishlist-nav" class="nav-btn" title="View Wishlist">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span id="wishlist-count-badge" class="badge-count">0</span>
+        </button>
+
+        <button id="btn-cart-nav" class="nav-btn cart-btn" title="Shopping Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span id="cart-count-badge" class="badge-count">0</span>
+          <span id="cart-total-badge" style="font-weight: 700;">$0.00</span>
+        </button>
+
+        <button id="btn-admin-nav" class="nav-btn" title="Store Management">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Admin</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          Premium Sound & Minimal Gear
+        </div>
+        <h1 class="hero-title">Elevate Your Everyday <span>Workspace & Lifestyle</span></h1>
+        <p class="hero-subtitle">
+          Curated collection of audiophile headphones, ergonomic desk hardware, and minimalist everyday accessories. Built for performance and designed to inspire.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#catalog" class="btn-primary">
+            Explore Collection
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <button id="btn-hero-deal" class="btn-secondary">
+            View Today's Deals
+          </button>
+        </div>
+
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Express Tracked Shipping</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>2-Year Full Warranty</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+              <path d="M21 3v5h-5"></path>
+              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+              <path d="M8 16H3v5"></path>
+            </svg>
+            <span>30-Day Hassle-Free Returns</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Spotlight Card -->
+      <div class="hero-visual">
+        <div class="hero-card-featured">
+          <div class="card-top-tag">
+            <span class="badge-tag bestseller">Spotlight Deal</span>
+            <div class="status-live">
+              <span class="pulse-dot"></span> In Stock
+            </div>
+          </div>
+          <img src="/images/headphones.svg" alt="Aura Pro Wireless Headphones">
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">Aura Pro Wireless ANC</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Active Noise Cancellation • 40-hour battery</p>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span style="font-size: 1.4rem; font-weight: 800; color: #fff;">$249.99</span>
+              <span style="font-size: 0.9rem; color: var(--text-dim); text-decoration: line-through; margin-left: 0.5rem;">$299.99</span>
+            </div>
+            <button class="btn-primary" style="padding: 0.55rem 1rem; font-size: 0.85rem;" onclick="store.addToCart(1)">
+              Quick Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Store Layout -->
+  <main class="main-layout" id="catalog">
+    
+    <!-- Category Filter Bar -->
+    <div class="category-bar" id="category-pills">
+      <button class="cat-btn active" data-category="All">
+        <span>✨ All Products</span>
+      </button>
+      <button class="cat-btn" data-category="Audio">
+        <span>🎧 Audio</span>
+      </button>
+      <button class="cat-btn" data-category="Wearables">
+        <span>⌚ Wearables</span>
+      </button>
+      <button class="cat-btn" data-category="Electronics">
+        <span>💻 Electronics</span>
+      </button>
+      <button class="cat-btn" data-category="Home & Office">
+        <span>🖥️ Home & Office</span>
+      </button>
+      <button class="cat-btn" data-category="Accessories">
+        <span>🎒 Accessories</span>
+      </button>
+    </div>
+
+    <!-- Toolbar: Results, Filter, Sort -->
+    <div class="toolbar">
+      <div class="results-count" id="results-count">
+        Showing <strong>12</strong> items
+      </div>
+
+      <div class="toolbar-controls">
+        <div class="filter-group">
+          <label for="price-slider">Max Price: <strong id="price-slider-val">$600</strong></label>
+          <input type="range" id="price-slider" class="price-slider" min="30" max="600" step="10" value="600">
+        </div>
+
+        <div class="filter-group">
+          <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
+            <input type="checkbox" id="instock-filter" style="accent-color: var(--primary);">
+            In Stock Only
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <label for="sort-select">Sort By:</label>
+          <select id="sort-select" class="sort-select">
+            <option value="featured">Featured Picks</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+            <option value="newest">Newest Arrivals</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products-grid" id="products-grid">
+      <!-- Rendered dynamically by JavaScript -->
+    </div>
+  </main>
+
+  <!-- Cart Slide-out Drawer -->
+  <div id="drawer-overlay" class="modal-overlay"></div>
+  <aside id="cart-drawer" class="drawer" aria-label="Shopping Cart">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span>Your Shopping Cart (<span id="cart-drawer-count">0</span>)</span>
+      </div>
+      <button id="close-cart-btn" class="drawer-close" title="Close cart">✕</button>
+    </div>
+
+    <!-- Free Shipping Progress Bar -->
+    <div class="free-shipping-bar" id="free-shipping-box">
+      <div id="free-shipping-text">Add $100.00 more to unlock FREE Express Shipping!</div>
+      <div class="progress-track">
+        <div id="shipping-progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items List -->
+    <div class="drawer-body" id="cart-items-list">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- Cart Footer / Totals -->
+    <div class="drawer-footer">
+      <div class="coupon-box">
+        <input type="text" id="coupon-code-input" class="coupon-input" placeholder="Promo code (e.g. SAVE20)">
+        <button id="apply-coupon-btn" class="btn-coupon">Apply</button>
+      </div>
+      <div id="applied-coupon-pill" style="display: none; font-size: 0.8rem; color: var(--success); font-weight: 600;"></div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-val">$0.00</span>
+      </div>
+      <div class="cart-summary-line" id="discount-row" style="display: none; color: var(--success);">
+        <span>Discount</span>
+        <span id="cart-discount-val">-$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Estimated Shipping</span>
+        <span id="cart-shipping-val">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Tax (8%)</span>
+        <span id="cart-tax-val">$0.00</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Total</span>
+        <span id="cart-grand-total-val">$0.00</span>
+      </div>
+
+      <button id="btn-proceed-checkout" class="btn-checkout">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title">Secure Fast Checkout</h2>
+        <button class="modal-close" onclick="store.closeModal('checkout-modal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="checkout-form" onsubmit="event.preventDefault(); store.submitOrder();">
+          
+          <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.85rem; color: var(--accent);">
+            1. Shipping Information
+          </h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="cust-name">Full Name *</label>
+              <input type="text" id="cust-name" class="form-control" placeholder="Alex Morgan" required>
+            </div>
+            <div class="form-group">
+              <label for="cust-email">Email Address *</label>
+              <input type="email" id="cust-email" class="form-control" placeholder="alex@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 0.75rem;">
+            <div class="form-group">
+              <label for="cust-phone">Phone Number</label>
+              <input type="tel" id="cust-phone" class="form-control" placeholder="+1 (555) 019-2834">
+            </div>
+            <div class="form-group">
+              <label for="cust-address">Street Address *</label>
+              <input type="text" id="cust-address" class="form-control" placeholder="742 Evergreen Terrace" required>
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 0.75rem; grid-template-columns: 1fr 1fr 1fr;">
+            <div class="form-group">
+              <label for="cust-city">City *</label>
+              <input type="text" id="cust-city" class="form-control" placeholder="Springfield" required>
+            </div>
+            <div class="form-group">
+              <label for="cust-state">State / Region</label>
+              <input type="text" id="cust-state" class="form-control" placeholder="OR">
+            </div>
+            <div class="form-group">
+              <label for="cust-zip">Postal / Zip *</label>
+              <input type="text" id="cust-zip" class="form-control" placeholder="97477" required>
+            </div>
+          </div>
+
+          <h3 style="font-size: 0.95rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: var(--accent);">
+            2. Payment Method
+          </h3>
+
+          <div class="payment-methods">
+            <div class="payment-option active" data-method="Credit Card" onclick="store.selectPaymentMethod(this, 'Credit Card')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+              <span>Card</span>
+            </div>
+            <div class="payment-option" data-method="UPI / PayPal" onclick="store.selectPaymentMethod(this, 'UPI / PayPal')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              <span>Digital / UPI</span>
+            </div>
+            <div class="payment-option" data-method="Cash on Delivery" onclick="store.selectPaymentMethod(this, 'Cash on Delivery')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+              <span>Cash on Delivery</span>
+            </div>
+          </div>
+
+          <!-- Card mock inputs -->
+          <div id="card-details-box" style="background: var(--bg-card); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1.5rem;">
+            <div class="form-group" style="margin-bottom: 0.75rem;">
+              <label>Card Number</label>
+              <input type="text" class="form-control" placeholder="•••• •••• •••• 4242" value="4242 •••• •••• 4242">
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Expiry</label>
+                <input type="text" class="form-control" placeholder="MM/YY" value="12/28">
+              </div>
+              <div class="form-group">
+                <label>CVV</label>
+                <input type="password" class="form-control" placeholder="•••" value="888">
+              </div>
+            </div>
+            <small style="color: var(--text-dim); display: block; margin-top: 0.5rem;">🔒 Safe 256-bit SSL encrypted test payment mode enabled.</small>
+          </div>
+
+          <div style="background: var(--bg-dark); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem;">
+              <span>Amount to Pay</span>
+              <span id="checkout-amount-display" style="color: var(--accent);">$0.00</span>
+            </div>
+          </div>
+
+          <button type="submit" id="btn-submit-order" class="btn-checkout">
+            Confirm & Place Order
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Success / Invoice Modal -->
+  <div id="order-success-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title" style="color: var(--success); display: flex; align-items: center; gap: 0.5rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          Order Confirmed!
+        </h2>
+        <button class="modal-close" onclick="store.closeModal('order-success-modal')">✕</button>
+      </div>
+      <div class="modal-body" id="order-success-content">
+        <!-- Rendered after order completion -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail & Reviews Modal -->
+  <div id="product-modal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 800px;">
+      <div class="modal-header">
+        <h2 class="modal-title" id="pmodal-title">Product Details</h2>
+        <button class="modal-close" onclick="store.closeModal('product-modal')">✕</button>
+      </div>
+      <div class="modal-body" id="product-modal-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Track Order Modal -->
+  <div id="track-order-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title">Track Your Shipment</h2>
+        <button class="modal-close" onclick="store.closeModal('track-order-modal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <input type="text" id="track-order-input" class="form-control" placeholder="Enter Order ID (e.g. ORD-123456)">
+          <button class="btn-primary" onclick="store.lookupOrder()">Track</button>
+        </div>
+        <div id="track-order-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Store Management Modal -->
+  <div id="admin-modal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 900px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Store Management & Orders</h2>
+        <button class="modal-close" onclick="store.closeModal('admin-modal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <!-- Stats Row -->
+        <div class="admin-stats-grid" id="admin-stats">
+          <div class="stat-box">
+            <div class="stat-val" id="admin-revenue">$0.00</div>
+            <div class="stat-lbl">Gross Revenue</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="admin-orders-count">0</div>
+            <div class="stat-lbl">Total Orders</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="admin-low-stock">0</div>
+            <div class="stat-lbl">Low Stock Alerts</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="admin-prod-count">12</div>
+            <div class="stat-lbl">Active Products</div>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.85rem;">Recent Customer Orders</h3>
+        <div style="overflow-x: auto;">
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Total</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="admin-orders-list">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom: 1rem;">
+          <div class="brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <span>NovaMart<span class="accent-dot">.</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.85rem; max-width: 320px; line-height: 1.6;">
+          Your premier destination for high-end audio gear, mechanical accessories, and modern desk workspace aesthetics.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop Categories</h4>
+        <ul>
+          <li><a href="#catalog" onclick="store.filterCategory('Audio')">Audiophile Audio</a></li>
+          <li><a href="#catalog" onclick="store.filterCategory('Wearables')">Smart Wearables</a></li>
+          <li><a href="#catalog" onclick="store.filterCategory('Electronics')">Electronics & Hardware</a></li>
+          <li><a href="#catalog" onclick="store.filterCategory('Home & Office')">Home & Ergonomics</a></li>
+          <li><a href="#catalog" onclick="store.filterCategory('Accessories')">Everyday Carry</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="#" onclick="event.preventDefault(); store.openTrackModal();">Track Your Order</a></li>
+          <li><a href="#" onclick="event.preventDefault(); store.toast('Shipping policy: 2-3 business days express delivery', 'info');">Shipping Policy</a></li>
+          <li><a href="#" onclick="event.preventDefault(); store.toast('Return policy: 30-day no questions asked returns', 'info');">Returns & Warranty</a></li>
+          <li><a href="#" onclick="event.preventDefault(); store.toast('Support team reachable at support@novamart.local', 'info');">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.75rem;">
+          Subscribe for early product launches and exclusive discounts.
+        </p>
+        <div style="display: flex; gap: 0.4rem;">
+          <input type="email" placeholder="Your email..." class="form-control" style="font-size: 0.8rem;">
+          <button class="btn-primary" style="padding: 0.5rem 0.9rem;" onclick="store.toast('Thank you for subscribing!', 'success')">Join</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 NovaMart Inc. All rights reserved. Engineered for perfection.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <span style="color: var(--success);">● System Online</span>
+        <span>Node.js & SQLite Native</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

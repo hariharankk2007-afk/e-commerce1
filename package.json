@@ -1,0 +1,20 @@
+{
+  "name": "nova-ecommerce",
+  "version": "1.0.0",
+  "description": "Full-stack modern e-commerce web application with native SQLite and pure Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test_internal.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "shop",
+    "sqlite",
+    "nodejs",
+    "store"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}

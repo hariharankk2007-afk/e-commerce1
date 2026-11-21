@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+    <defs>
+      <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ec4899"/>
+        <stop offset="100%" stop-color="#8b5cf6"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="400" rx="24" fill="#0f172a"/>
+    <circle cx="200" cy="200" r="130" fill="#ec4899" opacity="0.1"/>
+    <!-- Straps -->
+    <rect x="160" y="50" width="80" height="100" rx="8" fill="#1e293b"/>
+    <rect x="160" y="250" width="80" height="100" rx="8" fill="#1e293b"/>
+    <!-- Watch Body -->
+    <rect x="135" y="125" width="130" height="150" rx="34" fill="#334155" stroke="url(#sg)" stroke-width="4"/>
+    <rect x="145" y="135" width="110" height="130" rx="26" fill="#020617"/>
+    <!-- Screen Elements -->
+    <text x="200" y="195" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="32">10:42</text>
+    <circle cx="175" cy="230" r="12" fill="none" stroke="#10b981" stroke-width="3"/>
+    <path d="M 170 230 L 174 234 L 180 226" fill="none" stroke="#10b981" stroke-width="2"/>
+    <circle cx="205" cy="230" r="12" fill="none" stroke="#ec4899" stroke-width="3"/>
+    <circle cx="225" cy="230" r="12" fill="none" stroke="#3b82f6" stroke-width="3"/>
+    <text x="200" y="375" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="600" font-size="14" letter-spacing="2">HORIZON AMOLED</text>
+  </svg>

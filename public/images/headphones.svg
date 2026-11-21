@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+    <defs>
+      <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6"/>
+        <stop offset="100%" stop-color="#1d4ed8"/>
+      </linearGradient>
+      <radialGradient id="r1" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="400" height="400" rx="24" fill="#0f172a"/>
+    <circle cx="200" cy="200" r="140" fill="url(#r1)"/>
+    <!-- Headband -->
+    <path d="M 120 220 A 100 100 0 0 1 280 220" fill="none" stroke="url(#g1)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M 140 180 A 80 80 0 0 1 260 180" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <!-- Left Ear Cup -->
+    <rect x="96" y="200" width="36" height="74" rx="18" fill="#3b82f6"/>
+    <rect x="104" y="212" width="20" height="50" rx="10" fill="#1e293b"/>
+    <!-- Right Ear Cup -->
+    <rect x="268" y="200" width="36" height="74" rx="18" fill="#3b82f6"/>
+    <rect x="276" y="212" width="20" height="50" rx="10" fill="#1e293b"/>
+    <circle cx="200" cy="330" r="4" fill="#64748b"/>
+    <text x="200" y="360" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="600" font-size="14" letter-spacing="2">AURA PRO ANC</text>
+  </svg>

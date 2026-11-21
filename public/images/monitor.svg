@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+    <defs>
+      <linearGradient id="scr" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0f172a"/>
+        <stop offset="100%" stop-color="#1e1b4b"/>
+      </linearGradient>
+      <linearGradient id="code" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#38bdf8"/>
+        <stop offset="100%" stop-color="#818cf8"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="400" rx="24" fill="#0f172a"/>
+    <!-- Stand -->
+    <rect x="188" y="240" width="24" height="60" rx="2" fill="#475569"/>
+    <ellipse cx="200" cy="300" rx="60" ry="12" fill="#334155"/>
+    <!-- UltraWide Curved Screen -->
+    <rect x="40" y="100" width="320" height="150" rx="12" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+    <rect x="48" y="108" width="304" height="134" rx="8" fill="url(#scr)"/>
+    <!-- Screen Graphics -->
+    <line x1="70" y1="130" x2="180" y2="130" stroke="url(#code)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="70" y1="150" x2="140" y2="150" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
+    <line x1="70" y1="170" x2="220" y2="170" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+    <line x1="70" y1="190" x2="160" y2="190" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <rect x="240" y="125" width="95" height="95" rx="6" fill="#334155" opacity="0.4"/>
+    <circle cx="288" cy="172" r="24" fill="none" stroke="#a855f7" stroke-width="6"/>
+    <text x="200" y="355" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="600" font-size="14" letter-spacing="2">LUMINA 34" 4K HDR</text>
+  </svg>
